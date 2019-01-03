@@ -1,6 +1,8 @@
 # optinwheel
 大转盘抽奖，网站营销工具
 
+<img src="https://github.com/luiyezheng/optinwheel/blob/master/Jietu20190103-225639.jpg" width = "500" height = "379" alt="图片名称" align=center />
+
 服务是收费的，原网址在这里 [wheelofpopups](https://www.wheelofpopups.com/)，但因为实在不好用，所以我把代码扒下来改了改。
 
 ## 使用方法
