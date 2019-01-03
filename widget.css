@@ -1,0 +1,380 @@
+#wheelPopup {
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999999;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+#wheelPopup::-webkit-scrollbar { width: 0 !important }
+#wheelPopup #wheelPopup_main {
+  position: absolute;
+  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden !important;
+  -ms-overflow-style: none;
+  z-index: 10;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 790px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: #49a3af;
+  -webkit-box-shadow: 5px 2px 60px 0px #000;
+  -moz-box-shadow: 5px 2px 60px 0px #000;
+  box-shadow: 5px 2px 60px 0px #000;
+}
+#wheelPopup #wheelPopup_main::-webkit-scrollbar { width: 0 !important }
+#wheelPopup #wheelPopup_main #wheelPopup_content {
+  position: absolute;
+  top: 10%;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  right: 0;
+  width: 50%;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  padding: 70px 5% 50px 0;
+  box-sizing: border-box;
+  z-index:999999;
+}
+#wheelPopup #wheelPopup_main::-webkit-scrollbar { width: 0 !important }
+#wheelPopup #wheelPopup_main #wheelPopup_content img#wheelLogo {
+  display: block !important;
+  float: right;
+  max-height: 45px;
+  max-width: 50%;
+  margin-bottom: 50px;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextTitle {
+  clear: both;
+  margin-bottom: 10px;
+  font-size: 1.8em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextDescription {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextDisclaimer {
+  opacity:0.8;
+  margin-bottom: 18px;
+  font-size: 0.72em;
+  line-height: 1.4em;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelCouponTitle{
+  margin-top:35px;
+  margin-bottom: 3px;
+  font-size: 0.7em;
+  line-height: 1.4em;
+  text-align:center;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelLeadsFields input {
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 3px;
+  background: #fff;
+  color: #000;
+  padding: 9px 11px 10px;
+  font-size: 0.9em;
+  border: 0;
+  width: 100%;
+  height: 36px;
+  box-sizing: border-box;
+  outline: none;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelLeadsFields #wheelCouponCode {
+  height: 50px;
+  line-height: 50px;
+  overflow:visible;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextClose {
+  margin-top: 40px;
+  font-size: 14px;
+  color: inherit;
+  text-shadow: none;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  display: inline-block;
+  opacity: 0.4;
+  text-shadow: 0 -1px 0 #000;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextClose .text {
+  display: inline-block;
+  line-height: 35px;
+  cursor: pointer;
+  padding-right: 14px;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextClose .icon {
+  display: inline-block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border-width: 0px;
+  border-style: solid;
+  float: right;
+  cursor: pointer;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextClose .icon:before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  width: 70%;
+  border-top-style: solid;
+  border-color: inherit;
+  border-width: 1px;
+  transform: rotate(45deg);
+  top: 50%;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content #wheelTextClose .icon:after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  width: 70%;
+  border-top-style: solid;
+  border-color: inherit;
+  border-width: 1px;
+  transform: rotate(-45deg);
+  bottom: 46%;
+}
+#wheelPopup #wheelPoweredby {
+    display: block;
+    width: 109px !important;
+    height: 45px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    cursor: pointer !important;
+    top: auto !important;
+    left: auto !important;
+    right: 30px !important;
+    bottom: 25px !important;
+}
+.peg, .wheelSVG {
+ visibility: hidden;
+}
+.wheelContainer {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+.centerCircle, .valueContainer, .wheelOutline, .wheelText {
+ pointer-events: none;
+}
+.wheelContainer {
+ text-align: right;
+}
+.wheelContainer {
+ transform: translate(-50%, 0);
+}
+.toast {
+
+}
+.peg-circle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  display: block;
+  background: white;
+  left: 66.6%;
+  top: 50%;
+  border-radius: 100px;
+  margin-top: -7px;
+}
+#wheelBar {
+  display:none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+  z-index: 9999999;
+}
+#wheelBar strong {
+  border: 2px dashed;
+  padding: 1px 8px;
+  margin: 0 5px;
+  font-size: 20px;
+  font-weight: normal;
+  vertical-align: -2px;
+  letter-spacing: 0px;
+  border-radius: 2px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+#wheelBar .countdown {
+  margin: 0 10px;
+  font-size: 22px;
+  font-weight: normal;
+  vertical-align: -2px;
+  letter-spacing: 2px;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#wheelBar .timer {
+
+}
+.wheelContainer {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  left: 5%;
+  top: 5%;
+}
+.wheelSVG {
+ position: absolute;
+ overflow: visible;
+ width: 100%;
+ height: 100%; 
+}
+.wheelSVG image {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.wheelText {
+ text-anchor: middle;
+ font-family: Arial, Arial, sans-serif;
+ -webkit-user-select: none;
+ user-select: none;
+}
+.wheelText tspan {
+  text-anchor: middle;
+}
+.toast {
+  opacity: 0;
+  position: relative !important;
+  left: auto !important;
+  transform: none !important;
+  background-color: transparent !important;
+}
+.toast p {
+ clear: both;
+}
+.wheelFade {
+    opacity: 0.3;
+    pointer-events: none;
+}
+label#wheelAccept {
+  position: relative;
+  line-height: 130%;
+  margin: 18px 0 18px;
+  display: block;
+  font-size: 12px;
+  position: relative;
+  padding: 0 0 0 23px;
+  cursor: pointer;
+  width: 72%;
+  color: #fff;
+}
+#wheelPopup #wheelPopup_main #wheelPopup_content label#wheelAccept input#wheelAcceptCheck {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: -2px;
+  top: -3px;
+  display: inline !important;
+  width: 18px !important;
+}
+button#wheelButton {
+ position:relative;
+ width: 100%;
+ max-width: 280px;
+ padding: 10px 0 10px;
+ margin:0;
+ line-height: 16px;
+ height: 36px;
+ display: block;
+ text-align: center;
+ font-size: 0.9em;
+ color: #fff;
+ background: #000;
+ border-radius: 3px;
+ border: none;
+ box-shadow: inset 0 -2px 0 rgba(0,0,0,0.3);
+ cursor: pointer;
+ font-family: Arial, Helvetica, Arial, sans-serif;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ z-index: 99999;
+}
+#wheelPopup ::-webkit-input-placeholder { color:#999 !important; }
+#wheelPopup ::-moz-placeholder { color:#999 !important; }
+#wheelPopup :-ms-input-placeholder { color:#999 !important; }
+@media only screen and (max-width: 480px) {
+ #wheelPopup .wheelContainer {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  left: 9%;
+  top: -20%;
+ }
+ #wheelPopup #wheelPopup_main #wheelPopup_content {
+  padding: 100px 0 0 0;
+  margin: 0 5% 0 0;
+  width:90%;
+  }
+ button#wheelButton {
+  max-width:100%;
+ }
+ #wheelBar .wheelHidden {
+  display:none;
+ }
+}
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+ .toast p, .toast span {
+  font-size: 20px;
+ }
+}
+@media only screen and (min-width: 801px) {
+ .toast p, .toast span {
+  font-size: 20px;
+ }
+ .wheelBarClose {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  font-size: 150%;
+  line-height: 150%;
+  opacity: 0.3;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.9);
+  font-weight: bold;
+  cursor: pointer;
+ }
+}
+@media only screen and (max-height: 480px) {
+ .toast p, .toast span {
+  font-size: 20px;
+ }
+ button {
+  font-size: 22px;
+  padding: 10px;
+  width: 40%;
+ }
+ .wheelContainer {
+ }
+}
+button#wheelButton:focus {
+ outline: 0;
+}
